@@ -1,28 +1,33 @@
 var projects = [];
 
-function Project(title, description, url, publishedOn) {
-  this.title = title;
-  this.description = description;
-  this.url = url;
-  this.publishedOn = publishedOn;
+function Project(opts) {
+  this.title = opts.title;
+  this.description = opts.description;
+  this.url = opts.url;
+  this.publishedOn = opts.publishedOn;
 }
 
 Project.prototype.toHtml = function () {
-  var $newProject = $('template').clone();
-  $newProject.find('h1').html(this.title);
+  var $newProject = $('article.template').clone();
+  $newProject.find('h2').html(this.title);
   $newProject.find('a').attr('href', this.url);
-  $newProject.find('time').html(parseInt((new Date() - new Date(this.publishedOn))) + ' days ago.');
-  $newProject.find('project-body').html(this.description);
+  $newProject.find('time').html(parseInt((new Date() - new Date(this.publishedOn))/ 60 / 60 / 24 / 1000) + ' days ago.');
+  $newProject.find('section.project-body').html(this.description);
   $newProject.removeClass('template');
 
   return $newProject;
 };
 
+fakeProjectData.sort(function(a,b) {
+  return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
+});
+
 fakeProjectData.forEach(function(ele) {
+  console.log(ele);
   projects.push(new Project(ele));
 });
 
 
 projects.forEach(function(a) {
-  $('.projects').append(a.toHtml());
+  $('#projects').append(a.toHtml());
 });

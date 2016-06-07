@@ -1,7 +1,21 @@
+* {
+  background-color: #CCCCCC;
+}
 p {
   font-size: 1em;
 }
 
 img {
   max-width: 100%;
+  float: right;
+}
+
+body {
+  line-height: 1.5;
+  font-size: 100%;
+}
+
+article {
+  border-bottom: 1px solid black;
+  margin: 0 3%;
 }

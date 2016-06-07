@@ -9,6 +9,15 @@
   display: block;
 }
 
+.template {
+    display: none;
+}
+
+.byline {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
 @media only screen and (min-width: 640px) {
   .icon-menu {
     display: none;
