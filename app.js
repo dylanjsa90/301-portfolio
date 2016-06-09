@@ -23,7 +23,6 @@ fakeProjectData.sort(function(a,b) {
 });
 
 fakeProjectData.forEach(function(ele) {
-  console.log(ele);
   projects.push(new Project(ele));
 });
 
