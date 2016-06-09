@@ -11,30 +11,62 @@
   </head>
   <body>
     <header>
+      <h1>Portfolio of Dylan Sanders</h1>
       <nav class="main-nav">
         <div class="icon-menu"></div>
         <ul>
-          <li>Home</li>
-          <li>About me</li>
+          <li class="tab" data-content="projects"><a href="#">Home</a></li>
+          <li class="tab" data-content="about"><a href="#">About me</a></li>
           <li><a href="https://github.com/dylanjsa90" class="icon-github">GitHub</a></li>
           <li><a href="https://www.facebook.com" class="icon-facebook">blank facebook</a></li>
           <li><a href="https://www.twitter.com" class="icon-twitter">blank twitter</a></li>
         </ul>
       </nav>
     </header>
-    <h1>Portfolio of Dylan Sanders</h1>
-    <section id="projects">
-      <article class="template">
-        <h2><a href="">Title</a></h2>
-        </div>
-        <section class="project-body">
+    <main>
+      <section id="projects" class="tab-content">
+      <div>
+        <ul id="filters">
+          <li>
+          <select id="a-filter">
+            <option value="">Filter by ...a</option>
+          </select>
+          </li>
+          <li>
+          <select id="b-filter">
+            <option value="">Filter by ...b<option>
+          </select>
+          </li>
+        </ul>
+      </div>
+        <article class="template">
+          <h2><a href="">Title</a></h2>
+          </div>
+          <div class="byline"> By Dylan Sanders, published <time>Publish time</time>
+            <section class="project-body"></section>
+            <a href="#" class="show-more">Show more</a>
+          </article>
         </section>
-        <div class="byline"> By Dylan Sanders, published <time>Publish time</time>
-      </article>
-    </section>
+
+        <section id="about" class="tab-content">
+          <header>
+            Welcome to my fake Portfolio
+          </header>
+          <section>
+            <h2>My experience</h2>
+            <ul>
+              <li>CSE 142 @ UW</li>
+              <li>CSE 143 @ UW</li>
+              <li>CSE 154 @ UW</li>
+              <li>Codefellows 201</li>
+            </ul>
+          </section>
+        </section>
+      </main>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="project-data.js"></script>
     <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="project-view.js"></script>
 
   </body>
 </html>

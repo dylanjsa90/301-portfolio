@@ -2,12 +2,15 @@
   float: right;
 }
 .main-nav ul {
-  display: inline-block;
+  display: none;
+  list-style: none;
+  clear: both;
 }
 
 .main-nav:hover ul{
   display: block;
 }
+
 
 .template {
     display: none;
@@ -22,7 +25,9 @@
   .icon-menu {
     display: none;
   }
-
+  .main-nav ul{
+    display: block;
+  }
   .main-nav:hover {
     display: inline-block;
   }
