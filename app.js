@@ -7,15 +7,12 @@ function Project(opts) {
   this.publishedOn = opts.publishedOn;
 }
 
-Project.prototype.toHtml = function () {
-  var $newProject = $('article.template').clone();
-  $newProject.find('h2').html(this.title);
-  $newProject.find('a').attr('href', this.url);
-  $newProject.find('time').html(parseInt((new Date() - new Date(this.publishedOn))/ 60 / 60 / 24 / 1000) + ' days ago.');
-  $newProject.find('section.project-body').html(this.description);
-  $newProject.removeClass('template');
-
-  return $newProject;
+Project.prototype.toHtml = function (scriptTemplateId) {
+  // var $newProject = $('article.template').clone();
+  // $newProject.find('time').html(parseInt((new Date() - new Date(this.publishedOn))/ 60 / 60 / 24 / 1000) + ' days ago.');
+  this.publishedTime = parseInt((new Date() - new Date(this.publishedOn))/ 60 / 60 / 24 / 1000) + ' days ago.';
+  var template = Handlebars.compile($(scriptTemplateId).text());
+  return template(this);
 };
 
 fakeProjectData.sort(function(a,b) {
@@ -28,5 +25,5 @@ fakeProjectData.forEach(function(ele) {
 
 
 projects.forEach(function(a) {
-  $('#projects').append(a.toHtml());
+  $('#projects').append(a.toHtml('#article-template'));
 });
