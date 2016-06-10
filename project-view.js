@@ -3,10 +3,10 @@ var projectView = {};
 projectView.addFilters = function() {
   $('article').not('.template').each(function() {
     console.log($(this));
-    var filter = $('"' + $(this) + '":first-child').text();
-    console.log(filter);
-    var optionTag = '<option value"' + filter + '">' + filter + '</option>';
-    $('#a-filter').append(optionTag);
+    // var filter = $('"' + $(this) + '":first-child').text();
+    // console.log(filter);
+    // var optionTag = '<option value"' + filter + '">' + filter + '</option>';
+    // $('#a-filter').append(optionTag);
 
 
   });
