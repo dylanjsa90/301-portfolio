@@ -8,8 +8,6 @@ function Project(opts) {
 }
 
 Project.prototype.toHtml = function (scriptTemplateId) {
-  // var $newProject = $('article.template').clone();
-  // $newProject.find('time').html(parseInt((new Date() - new Date(this.publishedOn))/ 60 / 60 / 24 / 1000) + ' days ago.');
   this.publishedTime = parseInt((new Date() - new Date(this.publishedOn))/ 60 / 60 / 24 / 1000) + ' days ago.';
   var template = Handlebars.compile($(scriptTemplateId).text());
   return template(this);
