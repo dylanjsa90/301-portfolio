@@ -1,14 +1,17 @@
 .main-nav {
   float: right;
 }
+
 .main-nav ul {
   display: none;
   list-style: none;
   clear: both;
 }
+
 .icon-menu {
   float: right;
 }
+
 .main-nav:hover ul{
   display: block;
 }
@@ -26,9 +29,11 @@
   .icon-menu {
     display: none;
   }
+
   .main-nav ul{
     display: block;
   }
+
   .main-nav:hover {
     display: inline-block;
   }

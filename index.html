@@ -10,15 +10,16 @@
     <link rel="stylesheet" href="styles/modules.css" type="text/css">
 
     <script id="article-template" type="text/x-handlebars-template">
-      <article class="clearfix  ">
-      <h2><a href="{{url}}">{{title}}</a></h2>
-      <div class="byline"> By Dylan Sanders, published <time>{{publishedTime}}</time>
-      </div>
-      <section class="project-body">{{{description}}}</section>
-      <a href="{{url}}" class="show-more">Show more</a>
-    </article>
+      <article class="clearfix">
+        <h2><a href="{{url}}">{{title}}</a></h2>
+        <div class="byline"> By Dylan Sanders, published <time>{{publishedTime}}</time>
+        </div>
+        <section class="project-body">{{{description}}}</section>
+        <a href="{{url}}" class="show-more">Show more</a>
+      </article>
     </script>
   </head>
+
   <body>
     <header>
       <h1>Portfolio of Dylan Sanders</h1>
@@ -35,25 +36,25 @@
     </header>
     <main>
       <section id="projects" class="tab-content">
-      <div>
-        <ul id="filters">
-          <li>
-          <select id="a-filter">
-            <option value="">Filter by ...a</option>
-          </select>
-          </li>
-          <li>
-          <select id="b-filter">
-            <option value="">Filter by ...b<option>
-          </select>
-          </li>
-        </ul>
-      </div>
+        <div>
+          <ul id="filters">
+            <li>
+              <select id="a-filter">
+                <option value="">Filter by ...a</option>
+              </select>
+            </li>
+            <li>
+              <select id="b-filter">
+                <option value="">Filter by ...b<option>
+              </select>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <section id="about" class="tab-content">
         <header>
-          Welcome to my fake Portfolio
+          <h1>Welcome to my fake Portfolio</h1>
         </header>
         <section>
           <h2>My experience</h2>
@@ -66,6 +67,7 @@
         </section>
       </section>
     </main>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script type="text/javascript" src="project-data.js"></script>
