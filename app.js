@@ -1,10 +1,9 @@
 var projects = [];
 
 function Project(opts) {
-  this.title = opts.title;
-  this.description = opts.description;
-  this.url = opts.url;
-  this.publishedOn = opts.publishedOn;
+  for (keys in opts) {
+    this[keys] = opts[keys];
+  }
 }
 
 Project.prototype.toHtml = function (scriptTemplateId) {

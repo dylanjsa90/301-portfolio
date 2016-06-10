@@ -7,8 +7,6 @@ projectView.addFilters = function() {
     // console.log(filter);
     // var optionTag = '<option value"' + filter + '">' + filter + '</option>';
     // $('#a-filter').append(optionTag);
-
-
   });
 };
 
