@@ -6,11 +6,12 @@
   list-style: none;
   clear: both;
 }
-
+.icon-menu {
+  float: right;
+}
 .main-nav:hover ul{
   display: block;
 }
-
 
 .template {
     display: none;
