@@ -35,8 +35,13 @@ projectView.showMore = function() {
   });
 };
 
-$(document).ready(function() {
+projectView.renderIndexPage = function() {
+  Project.all.forEach(function(a) {
+    $('#projects').append(a.toHtml('#article-template'));
+  });
   projectView.addFilters();
   projectView.handleNav();
   projectView.showMore();
-});
+};
+
+Project.fetchAll();
