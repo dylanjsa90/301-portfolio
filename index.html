@@ -4,21 +4,22 @@
     <title>Dylan's Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="vendor/normalize.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="styles/icons.css" type="text/css">
+    <link rel="stylesheet" href="vendor/icons.css" type="text/css">
     <link rel="stylesheet" href="styles/base.css" type="text/css">
     <link rel="stylesheet" href="styles/layout.css" type="text/css">
     <link rel="stylesheet" href="styles/modules.css" type="text/css">
 
     <script id="article-template" type="text/x-handlebars-template">
-      <article class="clearfix  ">
-      <h2><a href="{{url}}">{{title}}</a></h2>
-      <div class="byline"> By Dylan Sanders, published <time>{{publishedTime}}</time>
-      </div>
-      <section class="project-body">{{{description}}}</section>
-      <a href="{{url}}" class="show-more">Show more</a>
-    </article>
+      <article class="clearfix">
+        <h2><a href="{{url}}">{{title}}</a></h2>
+        <div class="byline"> By Dylan Sanders, published <time>{{publishedTime}}</time>
+        </div>
+        <section class="project-body">{{{description}}}</section>
+        <a href="{{url}}" class="show-more">Show more</a>
+      </article>
     </script>
   </head>
+
   <body>
     <header>
       <h1>Portfolio of Dylan Sanders</h1>
@@ -35,49 +36,42 @@
     </header>
     <main>
       <section id="projects" class="tab-content">
-      <div>
-        <ul id="filters">
-          <li>
-          <select id="a-filter">
-            <option value="">Filter by ...a</option>
-          </select>
-          </li>
-          <li>
-          <select id="b-filter">
-            <option value="">Filter by ...b<option>
-          </select>
-          </li>
-        </ul>
-      </div>
-        <!-- <article class="template">
-          <h2><a href="">Title</a></h2>
-          <div class="byline"> By Dylan Sanders, published <time>Publish time</time>
-          </div>
-            <section class="project-body"></section>
-            <a href="#" class="show-more">Show more</a>
-          </article> -->
+        <div>
+          <ul id="filters">
+            <li>
+              <select id="a-filter">
+                <option value="">Filter by ...a</option>
+              </select>
+            </li>
+            <li>
+              <select id="b-filter">
+                <option value="">Filter by ...b<option>
+              </select>
+            </li>
+          </ul>
+        </div>
       </section>
 
-        <section id="about" class="tab-content">
-          <header>
-            Welcome to my fake Portfolio
-          </header>
-          <section>
-            <h2>My experience</h2>
-            <ul>
-              <li>CSE 142 @ UW</li>
-              <li>CSE 143 @ UW</li>
-              <li>CSE 154 @ UW</li>
-              <li>Codefellows 201</li>
-            </ul>
-          </section>
+      <section id="about" class="tab-content">
+        <header>
+          <h1>Welcome to my fake Portfolio</h1>
+        </header>
+        <section>
+          <h2>My experience</h2>
+          <ul>
+            <li>CSE 142 @ UW</li>
+            <li>CSE 143 @ UW</li>
+            <li>CSE 154 @ UW</li>
+            <li>Codefellows 201</li>
+          </ul>
         </section>
-      </main>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
-    <script type="text/javascript" src="project-data.js"></script>
-    <script type="text/javascript" src="app.js"></script>
-    <script type="text/javascript" src="project-view.js"></script>
+      </section>
+    </main>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <!-- <script type="text/javascript" src="scripts/project-data.js"></script> -->
+    <script type="text/javascript" src="scripts/app.js"></script>
+    <script type="text/javascript" src="scripts/project-view.js"></script>
   </body>
 </html>

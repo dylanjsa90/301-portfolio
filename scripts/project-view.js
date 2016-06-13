@@ -7,8 +7,6 @@ projectView.addFilters = function() {
     // console.log(filter);
     // var optionTag = '<option value"' + filter + '">' + filter + '</option>';
     // $('#a-filter').append(optionTag);
-
-
   });
 };
 
@@ -37,8 +35,13 @@ projectView.showMore = function() {
   });
 };
 
-$(document).ready(function() {
+projectView.renderIndexPage = function() {
+  Project.all.forEach(function(a) {
+    $('#projects').append(a.toHtml('#article-template'));
+  });
   projectView.addFilters();
   projectView.handleNav();
   projectView.showMore();
-});
+};
+
+Project.fetchAll();
