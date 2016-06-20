@@ -23,21 +23,21 @@
     });
   };
 
-  Project.fetchAll = function(nextFunction) {
+  Project.fetchAll = function() {
     if (localStorage.fakeProjectData) {
       var data = JSON.parse(localStorage.getItem('fakeProjectData'));
       Project.loadAll(data);
-      nextFunction();
+
     } else {
-      Project.getAll(nextFunction);
+      Project.getAll();
+
     };
   };
 
-  Project.getAll = function(nextFunction) {
+  Project.getAll = function() {
     $.getJSON('../data/fakeprojectdata.json', function(data) {
       localStorage.setItem('fakeProjectData', JSON.stringify(data));
       Project.loadAll(data);
-      nextFunction();
     });
   };
 
