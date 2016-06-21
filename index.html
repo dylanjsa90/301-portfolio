@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles/base.css" type="text/css">
     <link rel="stylesheet" href="styles/layout.css" type="text/css">
     <link rel="stylesheet" href="styles/modules.css" type="text/css">
-
+    <link rel="icon" type="image/x-icon" href="https://i.imgur.com/7v5ASc8.png">
     <script id="article-template" type="text/x-handlebars-template">
       <article class="clearfix">
         <h2><a href="{{url}}">{{title}}</a></h2>
@@ -26,11 +26,11 @@
       <nav class="main-nav">
         <div class="icon-menu"></div>
         <ul>
-          <li class="tab" data-content="projects"><a href="#">Home</a></li>
-          <li class="tab" data-content="about"><a href="#">About me</a></li>
+          <li class="tab" data-content="projects"><a href="/">Home</a></li>
+          <li class="tab" data-content="about"><a href="/about">About me</a></li>
           <li><a href="https://github.com/dylanjsa90" class="icon-github">GitHub</a></li>
-          <li><a href="https://www.facebook.com" class="icon-facebook">blank facebook</a></li>
-          <li><a href="https://www.twitter.com" class="icon-twitter">blank twitter</a></li>
+          <li><a href="https://www.facebook.com" class="icon-facebook"> facebook</a></li>
+          <li><a href="https://www.twitter.com" class="icon-twitter"> twitter</a></li>
         </ul>
       </nav>
     </header>
@@ -73,11 +73,17 @@
     <footer>
       &copy; 2016 Dylan Sanders | Fake Portfolio | Happy Ipsum!
     </footer>
-
+    <script src="vendor/scripts/page.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
-    <!-- <script type="text/javascript" src="scripts/project-data.js"></script> -->
-    <script type="text/javascript" src="scripts/app.js"></script>
-    <script type="text/javascript" src="scripts/project-view.js"></script>
+
+    <!-- model -->
+    <script type="text/javascript" src="scripts/model/app.js"></script>
+    <!-- view -->
+    <script type="text/javascript" src="scripts/views/project-view.js"></script>
+    <!-- controllers -->
+    <script src="scripts/controllers/projectController.js"></script>
+    <script src="scripts/controllers/aboutController.js"></script>
+    <script src="scripts/controllers/routes.js"></script>
   </body>
 </html>

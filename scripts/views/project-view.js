@@ -4,21 +4,18 @@
   projectView.addFilters = function() {
     $('article').not('.template').each(function() {
       console.log($(this));
-      // var filter = $('"' + $(this) + '":first-child').text();
-      // console.log(filter);
-      // var optionTag = '<option value"' + filter + '">' + filter + '</option>';
-      // $('#a-filter').append(optionTag);
+      // On hold until filter categories are decided
     });
   };
 
-  projectView.handleNav = function() {
-    $('.main-nav').on('click', '.tab', function() {
-      $('.tab-content').hide();
-      var content = $(this).attr('data-content');
-      $('#' + content).fadeIn();
-    });
-    $('.main-nav .tab:first').click();
-  };
+  // projectView.handleNav = function() {
+  //   $('.main-nav').on('click', '.tab', function() {
+  //     $('.tab-content').hide();
+  //     var content = $(this).attr('data-content');
+  //     $('#' + content).fadeIn();
+  //   });
+  //   $('.main-nav .tab:first').click();
+  // };
 
   projectView.showMore = function() {
     $('.project-body *:nth-of-type(n+2)').hide();
@@ -40,8 +37,8 @@
     Project.allProjects.forEach(function(a) {
       $('#projects').append(a.toHtml('#article-template'));
     });
-    projectView.addFilters();
-    projectView.handleNav();
+    // projectView.addFilters();
+    // projectView.handleNav();
     projectView.showMore();
     $('.total-projects').text(Project.allProjects.length);
     $('.total-words').text(Project.numWordsAll());
@@ -49,7 +46,6 @@
   };
 
 
-  Project.fetchAll(projectView.renderIndexPage);
-
+  Project.fetchAll();
   module.projectView = projectView;
 })(window);
