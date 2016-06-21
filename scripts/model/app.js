@@ -32,6 +32,7 @@
       Project.getAll();
 
     };
+
   };
 
   Project.getAll = function() {

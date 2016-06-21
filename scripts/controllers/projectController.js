@@ -3,7 +3,7 @@
 
   projectController.index = function() {
     $('.tab-content').hide();
-    $('#articles').fadeIn();
+    $('#projects').fadeIn();
   };
 
   projectView.renderIndexPage();
