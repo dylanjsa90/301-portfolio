@@ -3,15 +3,10 @@
   repos.allRepos = [];
 
   repos.requestRepos = function(callback) {
-    $.ajax({
-      url: 'https://api.github.com/users/dylanjsa90/repos?per_page20&sort=updated',
-      type: 'GET',
-      headers:{'Authorization': 'token ' + githubToken},
-      success: function(data) {
-        repos.allRepos = data;
-        callback();
-      }
-    });
+    $.get('/github/users/dylanjsa90/repos?per_page=10&sorted=updated')
+      .done(function(data) {
+        repos.allRepos =data;
+      }).done(callback);
   };
 
   repos.withAttr = function(attr) {
