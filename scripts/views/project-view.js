@@ -1,22 +1,6 @@
 (function(module) {
   var projectView = {};
 
-  projectView.addFilters = function() {
-    $('article').not('.template').each(function() {
-      console.log($(this));
-      // On hold until filter categories are decided
-    });
-  };
-
-  // projectView.handleNav = function() {
-  //   $('.main-nav').on('click', '.tab', function() {
-  //     $('.tab-content').hide();
-  //     var content = $(this).attr('data-content');
-  //     $('#' + content).fadeIn();
-  //   });
-  //   $('.main-nav .tab:first').click();
-  // };
-
   projectView.showMore = function() {
     $('.project-body *:nth-of-type(n+2)').hide();
     $('#projects').on('click', 'a.show-more', function() {
@@ -35,9 +19,9 @@
 
   projectView.renderIndexPage = function() {
     Project.allProjects.forEach(function(a) {
-      $('#projects').append(a.toHtml('#article-template'));
+      $('#projects').append(a.toHtml('#project-template'));
     });
-    // projectView.addFilters();
+
     // projectView.handleNav();
     projectView.showMore();
     $('.total-projects').text(Project.allProjects.length);
